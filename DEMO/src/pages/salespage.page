@@ -1,0 +1,12 @@
+<apex:page standardController="sales__c" recordSetVar="sales__c" >
+  <apex:form >
+    <apex:pageblock >
+        <apex:pageBlockTable value="{!sales__c}" var="sa">
+            <apex:column value="{!sa.Account__c}"/>
+            <apex:column value="{!sa.Location__c}"/>
+            <apex:column value="{!sa.Quaters__c}"/>
+            
+       </apex:pageBlockTable>
+   </apex:pageblock>
+   </apex:form>  
+</apex:page>

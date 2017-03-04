@@ -1,0 +1,40 @@
+<apex:page standardController="Contact" extensions="Oakley">
+
+<apex:form >
+
+<apex:pageBlock id="PB" >
+
+<apex:pageBlockSection title="Contact">
+<apex:inputField value="{!Phone.FirstName}"/>
+<apex:inputField value="{!Phone.LastName}" required="True"/>
+<apex:pageblockSectionItem >
+<apex:outputlabel > Account Name </apex:outputLabel>
+<apex:actionRegion >
+
+
+<apex:inputField value="{!Phone.AccountID}"  >
+<apex:actionSupport event="onchange" action="{!fectchAcc}" reRender="PB" />
+</apex:inputfield>
+
+</apex:actionRegion>
+</apex:pageblockSectionItem>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Account">
+<apex:inputField value="{!Tommy.Name}" required="True"/>
+<apex:inputField value="{!Tommy.BillingCity}"/>
+<apex:inputField value="{!Tommy.BillingCountry}"/>
+<apex:inputField value="{!Tommy.Type}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Opportunitie">
+<apex:inputField value="{!swiss.AccountID}"/>
+<apex:inputField value="{!swiss.CloseDate}"/>
+<apex:inputField value="{!swiss.Name}"/>
+<apex:inputField value="{!swiss.Probability}"/>
+<apex:inputField value="{!swiss.StageName}"/>
+</apex:pageBlockSection>
+<apex:pageBlockButtons >
+    <apex:commandButton value="Save Contact & Account &Opportunity "  action="{!MyCustomSave}"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

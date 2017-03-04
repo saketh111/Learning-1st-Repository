@@ -1,0 +1,24 @@
+<apex:page standardController="Case">
+<apex:form >
+    <style type="text/css">
+        .textBox{
+            color:blue;
+            font-size : 18px;
+        }
+    </style>
+    <apex:pageBlock >
+        <apex:pageblockSection >
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="ContactId " style="color:blue;font-size:18px;"></apex:outputLabel>
+              <apex:inputField value="{!Case.ContactId }" styleClass="textBox"/>
+             </apex:pageBlockSectionItem>   
+             <apex:inputField value="{!Case.AccountId }" styleClass="textBox"/>
+             <apex:inputField value="{!Case.ClosedDate }"/>
+             <apex:inputField value="{!Case.CaseNumber }"/>
+        </apex:pageblockSection>  
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!Save}"/>
+        </apex:pageBlockButtons>   
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

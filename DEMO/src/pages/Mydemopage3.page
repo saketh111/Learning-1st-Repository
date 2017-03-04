@@ -1,0 +1,19 @@
+<apex:page standardController="sales__c"  RenderAs="PDF">
+   <apex:form >
+      <apex:pageBlock title="sales Edit">
+          <apex:pageBlocksection title="sales__c Information">
+             <apex:Outputfield value="{!sales__c.Account__c}"/>
+             <apex:Outputfield value="{!sales__c.Fiscal_year__c}"/>
+             <apex:Outputfield value="{!sales__c.Location__c}"/>
+             <apex:Outputfield value="{!sales__c.Quaters__c}"/>
+           </apex:pageBlockSection>
+         
+<apex:pageBlockButtons >
+<apex:commandButton action="{!save}" value="save"/>
+<apex:commandButton action="{!Cancel}" value="Cancel"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+
+</apex:form>
+</apex:page>

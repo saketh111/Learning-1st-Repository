@@ -1,0 +1,23 @@
+<apex:page sidebar="False" showHeader="false" standardController="case" >
+<apex:form >
+<apex:pageBlock title="visualforcecase">
+<apex:pageBlocksection title="Case Info">
+<apex:inputfield value="{!Case.Type}"/>
+<apex:inputfield value="{!Case.Reason}"/>
+<apex:inputfield value="{!Case.Status}"/>
+<apex:inputfield value="{!Case.Priority}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection title="Additional Information">
+<apex:inputfield value="{!Case.Product__c}"/>
+<apex:inputfield value="{!Case.PotentialLiability__c}"/>
+<apex:inputfield value="{!Case.EngineeringReqNumber__c}"/>
+<apex:inputfield value="{!Case.SLAViolation__c}"/>
+</apex:pageBlockSection>
+<apex:pageBlockButtons >
+<apex:commandButton action="{!save}" value=""/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+
+</apex:form>
+</apex:page>

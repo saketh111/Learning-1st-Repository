@@ -1,0 +1,16 @@
+<apex:page controller="PS4">
+ <apex:form >
+  <apex:pageBlock >
+   <apex:pageBlockSection title="Demo">
+    <apex:selectList label="Country" value="{!selectedcountry}" multiselect="false" size="1" >
+     <apex:selectOption itemLabel="India" itemValue="In"></apex:selectOption>
+      <apex:selectOption itemLabel="Unites states of America" itemValue="Us"></apex:selectOption>
+      <apex:selectOption itemLabel="England" itemValue="En"></apex:selectOption>
+      <apex:selectOption itemLabel="Canada" itemValue="Ca"></apex:selectOption>
+      </apex:selectList>
+     <apex:inputText value="{!mytext}" label="Country code"/>
+    <apex:commandButton value="---->" action="{!providtextboxvalue}"/>
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

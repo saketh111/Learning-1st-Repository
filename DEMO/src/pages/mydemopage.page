@@ -1,0 +1,23 @@
+<apex:page standardController="Account" >
+   <apex:form >
+      <apex:pageBlock title="Account Edit">
+          <apex:pageBlocksection title="Account Information">
+             <apex:inputfield value="{!Account.Name}"/>
+             <apex:inputfield value="{!Account.Phone}"/>
+             <apex:inputfield value="{!Account.ID}"/>
+             <apex:inputfield value="{!Account.Website}"/>
+           </apex:pageBlockSection>
+         <apex:pageBlockSection title="Address Information">
+<apex:inputfield value="{!Account.BillingCity}"/>
+<apex:inputfield value="{!Account.ShippingCity}"/>
+<apex:inputfield value="{!Account.ShippingCountry}"/>
+<apex:inputfield value="{!Account.BillingCountry}"/>
+</apex:pageBlockSection>
+<apex:pageBlockButtons >
+<apex:commandButton action="{!save}" value="save"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+
+</apex:form>
+</apex:page>

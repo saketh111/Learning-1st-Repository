@@ -1,0 +1,24 @@
+<apex:page standardController="student__c">
+<apex:form >
+    <style type="text/css">
+        .textBox{
+            color:Yellow;
+            font-size : 10px;
+        }
+    </style>
+    <apex:pageBlock >
+        <apex:pageblockSection >
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="First Name" style="color:blue;font-size:12px;"></apex:outputLabel>
+              <apex:inputField value="{!student__c.First_Name__c}" styleClass="textBox"/>
+             </apex:pageBlockSectionItem>   
+             <apex:inputField value="{!student__c.English__c}" styleClass="textBox"/>
+             <apex:inputField value="{!student__c.Hindi__c}" styleClass="textBox"/>
+             <apex:inputField value="{!student__c.GK__c}" styleClass="textBox"/>
+        </apex:pageblockSection>  
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!Save}"/>
+        </apex:pageBlockButtons>   
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

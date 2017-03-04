@@ -1,0 +1,7 @@
+<apex:page standardController="Account" sidebar="False" >
+   <apex:sectionHeader title="Account view" subtitle="New account"/>
+       
+<apex:form >
+ 
+</apex:form>
+</apex:page>

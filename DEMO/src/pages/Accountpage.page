@@ -1,0 +1,15 @@
+<apex:page controller="accountcontroller" >
+<apex:form >
+        <apex:pageBlock >
+            <apex:pageBlockTable value="{!youList}" var="you">
+                <apex:column value="{!you.Name}"/>
+                <apex:column value="{!you.Type}"/>
+                <apex:column value="{!you.AnnualRevenue}"/>
+            </apex:pageBlockTable>
+            <apex:pageBlockSection >
+                <apex:inputField value="{!con.LastName}"/>
+                <apex:inputField value="{!con.FirstName}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+</apex:form>
+</apex:page>

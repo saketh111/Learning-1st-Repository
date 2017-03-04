@@ -1,0 +1,19 @@
+<apex:page standardController="Case" renderAs="pdf">
+   <apex:form >
+      <apex:pageBlock title="CaseEdit">
+          <apex:pageBlocksection title="Case Information">
+             <apex:outputfield value="{!Case.ContactID}"/>
+             <apex:outputfield value="{!Case.AccountID}"/>
+             <apex:outputfield value="{!Case.Type}"/>
+             <apex:outputfield value="{!Case.Status}"/>
+           </apex:pageBlockSection>
+         
+<apex:pageBlockButtons >
+<apex:commandButton action="{!save}" value="save"/>
+<apex:commandButton action="{!Cancel}" value="Cancel"/>
+</apex:pageBlockButtons>
+</apex:pageBlock>
+
+
+</apex:form>
+</apex:page>

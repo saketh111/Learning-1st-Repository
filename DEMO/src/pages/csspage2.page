@@ -1,0 +1,25 @@
+<apex:page standardController="sales__c">
+<apex:form >
+    <style type="text/css">
+        .textBox{
+            color:red;
+            font-size : 22px;
+        }
+    </style>
+    <apex:pageBlock >
+        <apex:pageblockSection >
+             <apex:pageBlockSectionItem >
+                 <apex:outputLabel value="Account__c" style="color:blue;font-size:20px;"></apex:outputLabel>
+                 
+              <apex:inputField value="{!sales__c.Account__c}" styleClass="textBox"/>
+             </apex:pageBlockSectionItem>   
+             <apex:inputField value="{!sales__c.No_of_emplyoes__c}" styleClass="textBox"/>
+             <apex:inputField value="{!sales__c.Quaters__c}" styleClass="textBox"/>
+             <apex:inputField value="{!sales__c.revenue__c}" styleClass="textBox"/>
+        </apex:pageblockSection>  
+        <apex:pageBlockButtons >
+            <apex:commandButton value="Save" action="{!Save}"/>
+        </apex:pageBlockButtons>   
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

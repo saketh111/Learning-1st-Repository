@@ -1,0 +1,33 @@
+<apex:page showheader="false" controller="AccSearchSakethCtrl">
+<apex:form >
+<apex:pageblock >
+    <apex:pageblockSection title="Search Application" columns="1">
+        <apex:pageblockSectionItem >
+            <apex:outputLabel > Name :</apex:outputLabel>
+             <apex:inputText value="{!accSearch}"/>
+             </apex:pageblockSectionItem>
+             <apex:pageblockSectionItem >
+              <apex:outputLabel > Billing city :</apex:outputLabel>
+             <apex:inputText value="{!Billingcod}"/>
+              </apex:pageblockSectionItem><apex:pageblockSectionItem >
+              <apex:outputLabel > Phone :</apex:outputLabel>
+             <apex:inputText value="{!pho}"/>
+              </apex:pageblockSectionItem>
+              
+              </apex:pageblocksection>
+            
+              <apex:commandButton value="Search" action="{!doSearch}"/>
+             <apex:pageblockTable value="{!accList}" var="a">
+           <apex:column value="{!a.Name}"/>
+         <apex:column value="{!a.Billingcity}"/>
+         <apex:column value="{!a.phone}"/>
+         <apex:column value="{!a.industry}"/>
+         <apex:column value="{!a.type}"/>
+         <apex:column value="{!a.fax}"/>
+         
+        </apex:pageblockTable>
+    
+    
+</apex:pageblock>
+</apex:form>    
+</apex:page>
